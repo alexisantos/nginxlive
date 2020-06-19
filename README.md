@@ -1,6 +1,6 @@
-## LIVE COM NGINX (PARA YOUTUBE E FACEBOOK)
+## LIVE PSN CANDELARIA COM NGINX (PARA YOUTUBE E FACEBOOK)
 
-_Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://github.com/alexisantos/nginxlive/blob/master/live-com-nginx-pnsc.zip)_
+_Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://drive.google.com/open?id=1hr_uehZfe8cHS6sZTQ7JbLKHqSm_LPPw)_
 
 #### 1. PROCEDIMENTOS PARA INICIAR TRANSMISSÃO
 
@@ -22,14 +22,13 @@ _Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://g
 	- https://www.stunnel.org/downloads.html
 	- Abrir o arquivo de configuração em _C:\Program Files (x86)\stunnel\config\stunnel.conf_
 	- Copiar o texto abaixo no final do arquivo "stunnel.conf" e salvar.
-
-		[fb-live]
-		client = yes
-		client = yes
-		accept = 127.0.0.1:1935
-		connect = rtmp-pc.facebook.com:443
-		verifyChain = no
-
+    
+     [fb-live]
+	 client = yes
+	 client = yes
+	 accept = 127.0.0.1:1935
+	 connect = rtmp-pc.facebook.com:443
+	 verifyChain = no
 
     > **Nota**: Vou fazer testes mudando o valor de connect para "live-api-s.facebook.com:443", mas na live que funcionou deu certo do jeito que está acima.
 
@@ -50,6 +49,7 @@ _Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://g
 		- Para facebook colar a chave para depois de rtmp/
 		
     > **Nota 1**: No caso do facebook, o nginx vai mandar o fluxo de dados sem criptografia e o stunnel vai fazer isso pra nós e enviar para o facebook
+
     > **Nota 2**:  Caso não queira transmitir algum fluxo, é só comentar a linha com um # e não precisa mudar nada no OBS.
 
         EXEMPLO DE TRANMISSÃO SOMENTE PELO YOUTUBE COM NGINX: 
