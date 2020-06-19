@@ -2,7 +2,7 @@
 
 _Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://github.com/alexisantos/nginxlive/raw/master/live-com-nginx-pnsc.zip)_
 
-#### 1. PROCEDIMENTOS PARA INICIAR TRANSMISSÃO
+### 1. PROCEDIMENTOS PARA INICIAR TRANSMISSÃO
 
 > Caso seja o primeiro uso no computador, fazer os **procedimentos de instalação** descritos no próximo capítulo
 
@@ -16,7 +16,7 @@ _Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://g
 8. Acompanhar recepção do streaming no youtube e no facebook
 6. Iniciar a transmissão nas plataformas
 
-#### 2. PROCEDIMENTOS DE INSTALAÇÃO
+### 2. PROCEDIMENTOS DE INSTALAÇÃO
 
 1. Instalar o stunnel, ele é um proxy que permite que a funcionalidade de criptografia do facebook seja suportada pelo OBS. Ou seja, transmitimos em rtmp e o facebook recebe em rtmps.
 	- https://www.stunnel.org/downloads.html
@@ -104,7 +104,7 @@ _Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://g
            Fluxo facebook: 2500 kbps + 128 kbps = 2628
            > Upload total: 5256 kbps (5,14 Mbps)
 
-_As intruções de configuração deste pequeno manual foram baseadas nos testes que fiz, novas informações são sempre bem vindas_ 😀
+    _As intruções de configuração deste pequeno manual foram baseadas nos testes que fiz, novas informações são sempre bem vindas_ 😀
 
 10. Siga com os procedimentos para iniciar a transmissão [descritos no topo desta página](#1-procedimentos-para-iniciar-transmiss%C3%A3o) 
 
