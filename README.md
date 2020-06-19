@@ -33,7 +33,7 @@ _Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://g
 
 2. Iniciar o stunnel (no menu iniciar são criados alguns atalhos para "stunnel GUI start" e "stop"), após iniciar ele vai lá pra perto do relógio)
 
-        stunnel GUI Start
+       stunnel GUI Start
 
 3. Copiar pasta "nginx" para C:\
 
@@ -48,7 +48,8 @@ _Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://g
 	- Editar os "push", cada linha de push é uma transmissão diferente
 		- Para youtube basta colocar o endereço rtmp, seguido da chavede transmissão
 		- Para facebook colar a chave para depois de rtmp/
-		
+      
+
     > **Nota 1**: No caso do facebook, o nginx vai mandar o fluxo de dados sem criptografia e o stunnel vai fazer isso pra nós e enviar para o facebook
 
     > **Nota 2**:  Caso não queira transmitir algum fluxo, é só comentar a linha com um # e não precisa mudar nada no OBS.
@@ -106,5 +107,7 @@ _Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://g
 
     _As intruções de configuração deste pequeno manual foram baseadas nos testes que fiz, novas informações são sempre bem vindas_ 😀
 
-10. Siga com os procedimentos para iniciar a transmissão [descritos no topo desta página](#1-procedimentos-para-iniciar-transmiss%C3%A3o) 
+10. Hora de iniciar a tansmissão
+
+    Siga com os procedimentos para iniciar a transmissão [descritos no topo desta página](#1-procedimentos-para-iniciar-transmiss%C3%A3o) 
 
