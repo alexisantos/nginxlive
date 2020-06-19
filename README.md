@@ -88,7 +88,7 @@ _Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://g
 
     Um único fluxo vai ser gerado pelo OBS para o nginx, que vai duplicá-lo e os distribuir para o youtube e facebook ao mesmo tempo.
 
-    > Atentar que para o OBS estará existindo uma única transmissão, o que auxilia em baixar a carga de processamento do processador, mas ainda estará havendo o upload de dois fluxos de vídeo para a Internet.
+    > Atentar que para o OBS Studio está ocorrendo apenas uma transmissão, o que auxilia a baixar a carga de trabalho do processador, mas ainda estará havendo o upload de dois fluxos de vídeo para a Internet.
 
        Upload resultante com taxa de bits de vídeo em 1800 kbps:
            Fluxo youtube : 1800 kbps + 128 kbps = 1928
