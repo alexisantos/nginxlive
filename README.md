@@ -1,4 +1,4 @@
-## LIVE PSN CANDELARIA COM NGINX (PARA YOUTUBE E FACEBOOK)
+## LIVE COM NGINX (PARA YOUTUBE E FACEBOOK)
 
 _Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://github.com/alexisantos/nginxlive/blob/master/live-com-nginx-pnsc.zip)_
 
@@ -50,7 +50,6 @@ _Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://g
 		- Para facebook colar a chave para depois de rtmp/
 		
     > **Nota 1**: No caso do facebook, o nginx vai mandar o fluxo de dados sem criptografia e o stunnel vai fazer isso pra nós e enviar para o facebook
-
     > **Nota 2**:  Caso não queira transmitir algum fluxo, é só comentar a linha com um # e não precisa mudar nada no OBS.
 
         EXEMPLO DE TRANMISSÃO SOMENTE PELO YOUTUBE COM NGINX: 
