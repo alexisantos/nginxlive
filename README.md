@@ -1,6 +1,6 @@
 ## LIVE PSN CANDELARIA COM NGINX (PARA YOUTUBE E FACEBOOK)
 
-_Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://drive.google.com/open?id=1hr_uehZfe8cHS6sZTQ7JbLKHqSm_LPPw)_
+_Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://github.com/alexisantos/nginxlive/blob/master/live-com-nginx-pnsc.zip)_
 
 #### 1. PROCEDIMENTOS PARA INICIAR TRANSMISSÃO
 
