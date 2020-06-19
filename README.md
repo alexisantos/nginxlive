@@ -1,6 +1,6 @@
-## LIVE PSN CANDELARIA COM NGINX (PARA YOUTUBE E FACEBOOK)
+## LIVE COM NGINX SIMULTÂNEO (PARA YOUTUBE E FACEBOOK)
 
-_Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://drive.google.com/open?id=1hr_uehZfe8cHS6sZTQ7JbLKHqSm_LPPw)_
+_Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://github.com/alexisantos/nginxlive/raw/master/live-com-nginx-pnsc.zip)_
 
 #### 1. PROCEDIMENTOS PARA INICIAR TRANSMISSÃO
 
@@ -33,6 +33,8 @@ _Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://d
 
 2. Iniciar o stunnel (no menu iniciar são criados alguns atalhos para "stunnel GUI start" e "stop"), após iniciar ele vai lá pra perto do relógio)
 
+        stunnel GUI Start
+
 3. Copiar pasta "nginx" para C:\
 
 4. Abrir o arquivo de configuração do nginx em _C:\nginx\conf\nginx.conf_ e procurar pelo objeto **application live**
@@ -51,7 +53,8 @@ _Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://d
 
     > **Nota 2**:  Caso não queira transmitir algum fluxo, é só comentar a linha com um # e não precisa mudar nada no OBS.
 
-       EXEMPLO DE TRANMISSÃO SOMENTE PELO YOUTUBE COM NGINX: 
+       # EXEMPLO DE TRANMISSÃO SOMENTE PELO YOUTUBE COM NGINX: 
+       
        application live {
            live on;
            push rtmp://link-de-transmissão-youtube/chave-tranmissão-youtube;
@@ -102,3 +105,6 @@ _Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://d
            > Upload total: 5256 kbps (5,14 Mbps)
 
 _As intruções de configuração deste pequeno manual foram baseadas nos testes que fiz, novas informações são sempre bem vindas_ 😀
+
+10. Siga com os procedimentos para iniciar a transmissão [descritos no topo desta página](#1-procedimentos-para-iniciar-transmiss%C3%A3o) 
+
