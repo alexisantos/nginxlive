@@ -11,23 +11,22 @@ _Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://g
 3. Pegar as chaves de transmissão 
 4. Editar o arquivo de configuração do **nginx.conf** com os parâmetros da nova transmissão e **salvar o arquivo**.
 5. Iniciar o stunnel, **stunnel GUI Start**
-6. No stunnel, ir em **Configuration > Edit Configuration** e verificar em _[fb-live]_ se o parâmetro **connect** está correto
-7. Iniciar o nginx, **nginx - Start**
+	- No stunnel, ir em **Configuration > Edit Configuration** e verificar em _[fb-live]_ se o parâmetro **connect** está correto
+	- Em caso de alterações, recarregue as configurações em **Configuration > Reload Configuration**
+6. Iniciar o nginx, **nginx - Start**
 8. Iniciar a transmisão no **OBS Studio**
 9. Acompanhar recepção do streaming no youtube e no facebook
-10. Iniciar a transmissão nas plataformas
+9. Iniciar a transmissão nas plataformas
 
 ### 2. PROCEDIMENTOS DE INSTALAÇÃO
 
 1. Instalar o stunnel, ele é um proxy que permite que a funcionalidade de criptografia do facebook seja suportada pelo OBS. Ou seja, transmitimos em rtmp e o facebook recebe em rtmps.
 	- https://www.stunnel.org/downloads.html
     
-2. Abrir o stunnel, stunnel GUI Start
+2. Abrir o stunnel, **stunnel GUI Start**
 
-       stunnel GUI Start
-       
-    Após iniciar um ícone do programa vai aparecer perto do relógio
-       
+	> Após iniciar um ícone do programa vai aparecer perto do relógio
+
 3. Editar o arquivo de configuração
     - Provavelmente você será convidado a editar o arquivo de configuração, faça isso.
     - Caso não apareça mensagem para editar o arquivo de configuração, faça isso abrindo o stunnel GUI Start e clicando em:
