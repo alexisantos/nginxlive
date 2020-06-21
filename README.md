@@ -11,29 +11,36 @@ _Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://g
 3. Pegar as chaves de transmissão 
 4. Editar o arquivo de configuração do **nginx.conf** com os parâmetros da nova transmissão e **salvar o arquivo**.
 5. Iniciar o stunnel, **stunnel GUI Start**
-6. Iniciar o nginx, **nginx - Start**
-7. Iniciar a transmisão no **OBS Studio**
-8. Acompanhar recepção do streaming no youtube e no facebook
-6. Iniciar a transmissão nas plataformas
+6. No stunnel, ir em **Configuration > Edit Configuration** e verificar em _[fb-live]_ se o parâmetro **connect** está correto
+7. Iniciar o nginx, **nginx - Start**
+8. Iniciar a transmisão no **OBS Studio**
+9. Acompanhar recepção do streaming no youtube e no facebook
+10. Iniciar a transmissão nas plataformas
 
 ### 2. PROCEDIMENTOS DE INSTALAÇÃO
 
 1. Instalar o stunnel, ele é um proxy que permite que a funcionalidade de criptografia do facebook seja suportada pelo OBS. Ou seja, transmitimos em rtmp e o facebook recebe em rtmps.
 	- https://www.stunnel.org/downloads.html
-	- Abrir o arquivo de configuração em _C:\Program Files (x86)\stunnel\config\stunnel.conf_
+    
+2. Abrir o stunnel, stunnel GUI Start
+
+       stunnel GUI Start
+       
+    Após iniciar um ícone do programa vai aparecer perto do relógio
+       
+3. Editar o arquivo de configuração
+    - Provavelmente você será convidado a editar o arquivo de configuração, faça isso.
+    - Caso não apareça mensagem para editar o arquivo de configuração, faça isso abrindo o stunnel GUI Start e clicando em:
+        - Configuration > Edit Configuration
 	- Copiar o texto abaixo no final do arquivo "stunnel.conf" e salvar.
     
 		  [fb-live]
 		  client = yes
 		  accept = 127.0.0.1:1935
-		  connect = rtmp-pc.facebook.com:443
+		  connect = live-api-s.facebook.com:443
 		  verifyChain = no
 
-    > **Nota**: Vou fazer testes mudando o valor de connect para "live-api-s.facebook.com:443", mas na live que funcionou deu certo do jeito que está acima.
-
-2. Iniciar o stunnel (no menu iniciar são criados alguns atalhos para "stunnel GUI start" e "stop"), após iniciar ele vai lá pra perto do relógio)
-
-       stunnel GUI Start
+    > **Nota**: O parâmetro connect é obtido na página de transmissão do facebook, com o nome de **URL do servidor**. Geralmente ela está definida como _live-api-s.facebook.com:443_. Caso seja outra fazer a alteração.
 
 3. Copiar pasta "nginx" para C:\
 
@@ -78,7 +85,7 @@ _Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://g
        Chave de transmissão: <em branco> 
        Utilizar autenticação: <desmarcado>
 	
-    **Nota**: substitua nome-do-computador pelo nome do seu computador. Fiz uns testes com localhost e 127.0.0.1 no meu computador e deu umas falhas. Colocar o IP do wifi aqui não é uma boa prática porque senão vai ter que mudar o ip sempre. Caso ocorra algum problema utilizando o nome do computador, pode ser necessário criar uma interface de loopback com um endereço fixo.
+    **Nota**: Substitua nome-do-computador pelo nome do seu computador. Fiz uns testes com localhost e 127.0.0.1 no meu computador e ocorreram algumas falhas. Não considero boa prática colocar o IP de alguma interface aqui, pois isso vai fazer que sempre tenha que se verificar se o endereço mudou. Caso ocorra algum problema utilizando o nome do computador, pode ser necessário criar uma interface de loopback com um endereço fixo.
 
 9. Configuração de transmissão no OBS
 
