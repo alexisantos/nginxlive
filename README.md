@@ -35,7 +35,7 @@ _Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://g
     
 		  [fb-live]
 		  client = yes
-		  accept = 127.0.0.1:1935
+		  accept = 127.0.0.1:1940
 		  connect = live-api-s.facebook.com:443
 		  verifyChain = no
 
@@ -45,11 +45,24 @@ _Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://g
 
 4. Abrir o arquivo de configuração do nginx em _C:\nginx\conf\nginx.conf_ e procurar pelo objeto **application live**
 
-       application live {
-           live on;
-           push rtmp://link-de-transmissão-youtube/chave-tranmissão-youtube;
-           push rtmp://127.0.0.1:1935/rtmp/chave-de-transmissão-facebook;
-       }
+        rtmp {
+            server {
+                listen 1935;
+
+                application live {
+                    live on;
+                    push rtmp://link-de-transmissão-youtube/chave-tranmissão-youtube;
+                    push rtmp://127.0.0.1:1940/rtmp/chave-de-transmissão-facebook;
+                }
+
+                application hls {
+                    live on;
+                    hls on;  
+                    hls_path temp/hls;  
+                    hls_fragment 8s;  
+                }
+            }
+        }
 
 	- Editar os "push", cada linha de push é uma transmissão diferente
 		- Para youtube basta colocar o endereço rtmp, seguido da chavede transmissão
@@ -65,7 +78,7 @@ _Pré-Requisitos: OBS Studio instalado e [baixar os arquivos do NGINX](https://g
        application live {
            live on;
            push rtmp://link-de-transmissão-youtube/chave-tranmissão-youtube;
-         # push rtmp://127.0.0.1:1935/rtmp/chave-de-transmissão-facebook;
+         # push rtmp://127.0.0.1:1940/rtmp/chave-de-transmissão-facebook;
        }
 	
 5. Salvar o arquivo de configuração e Iniciar o servidor nginx (c:\nginx\nginx.exe)
